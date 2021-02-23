@@ -5,7 +5,9 @@
  */
 package facades;
 
+import dtos.JokeDTO;
 import dtos.RenameMeDTO;
+import entities.Joke;
 import entities.RenameMe;
 import javax.persistence.EntityManagerFactory;
 import utils.EMF_Creator;
@@ -17,10 +19,10 @@ import utils.EMF_Creator;
 public class Populator {
     public static void populate(){
         EntityManagerFactory emf = EMF_Creator.createEntityManagerFactory();
-        FacadeExample fe = FacadeExample.getFacadeExample(emf);
-        fe.create(new RenameMeDTO(new RenameMe("First 1", "Last 1")));
-        fe.create(new RenameMeDTO(new RenameMe("First 2", "Last 2")));
-        fe.create(new RenameMeDTO(new RenameMe("First 3", "Last 3")));
+        JokeFacade fe = JokeFacade.getFacadeExample(emf);
+        fe.create(new JokeDTO(new Joke("First 1", "middle 1", "Last 1")));
+        fe.create(new JokeDTO(new Joke("First 2","middle 2", "Last 2")));
+        fe.create(new JokeDTO(new Joke("First 3", "middle 3","Last 3")));
         
     }
     
