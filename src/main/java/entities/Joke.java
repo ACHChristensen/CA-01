@@ -61,5 +61,14 @@ public class Joke implements Serializable {
     public Long getId() {
         return id;
     }
-    
+
+    @Override
+    public String toString() {
+        return "Joke{" +
+                "joke='" + joke + '\'' +
+                ", type='" + type + '\'' +
+                ", jokeName='" + jokeName + '\'' +
+                ", id=" + id +
+                '}';
+    }
 }

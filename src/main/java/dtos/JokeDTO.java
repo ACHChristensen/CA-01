@@ -67,12 +67,11 @@ public class JokeDTO {
 
     @Override
     public String toString() {
-        return "JokeDTO{" + "id=" + id + ", str1=" + joke + ", str2=" + type + '}';
+        return "JokeDTO{" +
+                "id=" + id +
+                ", joke='" + joke + '\'' +
+                ", type='" + type + '\'' +
+                ", jokeName='" + jokeName + '\'' +
+                '}';
     }
-
-
-
-
-
-
 }
