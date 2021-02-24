@@ -1,15 +1,11 @@
+let URL = "http://localhost:8080/ca01/api/groupmember/getall"
+//let URL = "https://achc.dk/ca01/api/groupmember/getall" //Når vi aflevere
 
 const getAllMembersBtn = document.getElementById("fetchMembs")
 
 getAllMembersBtn.onclick = getAll;
-//getAllMembersBtn.addEventListener('click', getAll);
-//getAllMembersBtn.addEventListener('click', (event) => {
-//    event.preventDefault();
-//    getAll();
-//});
 
-let URL = "http://localhost:8080/ca01/api/groupmember/getall"
-//let URL = "https://achc.dk/ca01/api/groupmember/getall" //Når vi aflevere
+
 
 function getAll() {
     var data = fetch(URL)
