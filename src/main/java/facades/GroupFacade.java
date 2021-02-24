@@ -31,7 +31,7 @@ public class GroupFacade {
         if (instance == null) {
             emf = _emf;
             instance = new GroupFacade();
-        }
+        }   
         return instance;
     }
 
