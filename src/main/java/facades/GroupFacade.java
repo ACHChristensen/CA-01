@@ -1,6 +1,7 @@
 package facades;
 
 //import dtos.RenameMeDTO;
+import dtos.GroupMemberDTO;
 import entities.GroupMember;
 import java.util.List;
 import javax.persistence.EntityManager;
@@ -38,17 +39,17 @@ public class GroupFacade {
         return emf.createEntityManager();
     }
     
-    public RenameMeDTO create(RenameMeDTO rm){
-        RenameMe rme = new RenameMe(rm.getDummyStr1(), rm.getDummyStr2());
+    public GroupMemberDTO create(GroupMemberDTO gm){
+        GroupMember gme = new GroupMember(gm.getName(), gm.getStudentID(), gm.getFavoriteShow()); // Hvorfor er der et "kopi-objekt" her af parameterets object? Hvorfor ikke bare bruge objektet?
         EntityManager em = emf.createEntityManager();
         try {
             em.getTransaction().begin();
-            em.persist(rme);
+            em.persist(gme);
             em.getTransaction().commit();
         } finally {
             em.close();
         }
-        return new RenameMeDTO(rme);
+        return new GroupMemberDTO(gme);
     }
 //    public RenameMeDTO getById(long id){
 //        EntityManager em = emf.createEntityManager();
@@ -67,11 +68,11 @@ public class GroupFacade {
         
     }
     
-    public List<RenameMeDTO> getAll(){
+    public List<GroupMemberDTO> getAll(){
         EntityManager em = emf.createEntityManager();
-        TypedQuery<RenameMe> query = em.createQuery("SELECT r FROM RenameMe r", RenameMe.class);
-        List<RenameMe> rms = query.getResultList();
-        return RenameMeDTO.getDtos(rms);
+        TypedQuery<GroupMember> query = em.createQuery("SELECT g FROM GroupMember g", GroupMember.class);
+        List<GroupMember> rms = query.getResultList();
+        return GroupMemberDTO.getDtos(rms);
     }
     
     public static void main(String[] args) {

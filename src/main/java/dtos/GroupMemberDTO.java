@@ -33,7 +33,6 @@ public class GroupMemberDTO {
     }
 
     public GroupMemberDTO(GroupMember gm) {
-        this.id = gm.getId();
         this.name = gm.getName();
         this.studentID = gm.getStudentID();
         this.favoriteShow = gm.getFavoriteShow();
