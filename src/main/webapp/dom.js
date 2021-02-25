@@ -16,6 +16,7 @@ let all = [];
 showGirls();
 showBoys();
 showAll();
+document.getElementById('deletelast').checked = true;
 
 function showGirls(){
     
@@ -72,5 +73,41 @@ function addGirl(){
 function addBoy(){
     boys.push(document.getElementById('boystring').value);
     showBoys();
+    showAll();
+}
+
+document.getElementById('removeboy').addEventListener("click", removeBoy);
+function removeBoy(){
+    let order = document.getElementById('deletelast').checked;
+    if (order === true) {
+        boys.pop();
+    }
+    else{
+        boys.shift();
+    }
+    showBoys();
+    showAll();
+}
+document.getElementById('removegirl').addEventListener("click", removeGirl);
+function removeGirl(){
+    let order = document.getElementById('deletelast').checked;
+    if (order === true) {
+        girls.pop();
+    }
+    else{
+        girls.shift();
+    }
+    showGirls();
+    showAll();
+}
+
+document.getElementById('sortall').addEventListener("click", sortAll);
+function sortAll(){
+    all.sort();
+    showAll();
+}
+document.getElementById('reverseall').addEventListener("click", reverseAll);
+function reverseAll(){
+    all.reverse();
     showAll();
 }
