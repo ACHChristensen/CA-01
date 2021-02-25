@@ -74,11 +74,5 @@ public class GroupFacade {
         List<GroupMember> rms = query.getResultList();
         return GroupMemberDTO.getDtos(rms);
     }
-    
-    public static void main(String[] args) {
-        emf = EMF_Creator.createEntityManagerFactory();
-        GroupFacade fe = getGroupFacade(emf);
-        fe.getAll().forEach(dto->System.out.println(dto));
-    }
 
 }
