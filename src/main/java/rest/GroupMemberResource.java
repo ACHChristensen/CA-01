@@ -18,6 +18,12 @@ public class GroupMemberResource {
        
     private static final GroupFacade FACADE =  GroupFacade.getGroupFacade(EMF);
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
+    
+    @GET
+    @Produces({MediaType.APPLICATION_JSON})
+    public String demo() {
+        return "Velkommen";
+    }
             
     @Path("getall")
     @GET
