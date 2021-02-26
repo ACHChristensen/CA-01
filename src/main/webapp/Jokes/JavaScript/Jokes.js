@@ -1,7 +1,7 @@
 window.onload =
 
     function(){
-    fetch("api/jokes/all")
+    fetch("http://localhost:8080/ca-1/api/jokes/all")
         .then(res=>res.json())
         .then(data=> {
             document.getElementById("joke-table").innerHTML=makeTableRow(data);

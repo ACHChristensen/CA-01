@@ -43,7 +43,7 @@ public class JokeFacade {
     }
 
     public JokeDTO create(JokeDTO rm){
-        Joke rme = new Joke(rm.getJoke(), rm.getType(), rm.getJokeName());
+        Joke rme = new Joke(rm.getJoke(), rm.getJokeName(), rm.getType());
         EntityManager em = emf.createEntityManager();
         try {
             em.getTransaction().begin();

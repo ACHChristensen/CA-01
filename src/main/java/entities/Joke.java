@@ -22,7 +22,7 @@ public class Joke implements Serializable {
     public Joke() {
     }
 
-    public Joke(String joke, String type, String jokeName) {
+    public Joke(String joke, String jokeName, String type) {
         this.joke = joke;
         this.type = type;
         this.jokeName = jokeName;
