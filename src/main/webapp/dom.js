@@ -9,7 +9,7 @@ let girls = ["janne","hanne", "sanne"];
 
 let boys = ["peter","lars", "ole"];
 
-let all = [];
+let all = [...girls,...boys];
 
 
 
@@ -48,7 +48,7 @@ function showBoys(){
 
 
 function showAll(){
-    all = [...girls,...boys];
+    
     let allstr = '<ul>';
 
     all.forEach(function(person) {
@@ -66,12 +66,16 @@ document.getElementById('addgirl').addEventListener("click", addGirl);
 function addGirl(){
     girls.push(document.getElementById('girlstring').value);
     //opdater udskrift
+    
+    all = [...girls,...boys];
     showGirls();
     showAll();
     
 }
 function addBoy(){
     boys.push(document.getElementById('boystring').value);
+    
+    all = [...girls,...boys];
     showBoys();
     showAll();
 }
@@ -103,11 +107,11 @@ function removeGirl(){
 
 document.getElementById('sortall').addEventListener("click", sortAll);
 function sortAll(){
-    all.sort();
+    all = all.sort();
     showAll();
 }
 document.getElementById('reverseall').addEventListener("click", reverseAll);
 function reverseAll(){
-    all.reverse();
+    all = all.reverse();
     showAll();
 }
