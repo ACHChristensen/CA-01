@@ -1,10 +1,30 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
         <title>Start Page</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
     <body>
-        <h1>Change or remove this page</h1>
+        <div class="container">
+        <h1>Welcome to our CA1 page</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Student ID</th>
+                    <th>Favorite TV show</th>
+                </tr>
+            </thead>
+            <tbody id="table-rows">
+            </tbody>
+        </table>
+        <button id="fetchMembs" >Click here to fetch members</button>
+        <br>
+        <a href="contract.html">Click for group contract</a>
+        </div>
+        <script src="./JS/groupScript.js"></script>
+
+
     </body>
 </html>
