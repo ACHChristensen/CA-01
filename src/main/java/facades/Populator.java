@@ -22,9 +22,9 @@ public class Populator {
         EntityManagerFactory emf = EMF_Creator.createEntityManagerFactory();
 
         JokeFacade fe = JokeFacade.getFacadeExample(emf);
-        fe.create(new JokeDTO(new Joke("First 1", "middle 1", "Last 1")));
-        fe.create(new JokeDTO(new Joke("First 2","middle 2", "Last 2")));
-        fe.create(new JokeDTO(new Joke("First 3", "middle 3","Last 3")));
+        fe.create(new JokeDTO(new Joke("Chuck Norris doesn't have disk latency because the hard drive knows to hurry the hell up.", "middle 1", "Last 1")));
+        fe.create(new JokeDTO(new Joke("I ordered a chicken and an egg from Amazon. I’ll let you know..","middle 2", "Last 2")));
+        fe.create(new JokeDTO(new Joke("My friend keeps saying \"cheer up man it could be worse, you could be stuck underground in a hole full of water.\" I know he means well.", "middle 3","Last 3")));
         
 
         GroupFacade gf = GroupFacade.getGroupFacade(emf);
