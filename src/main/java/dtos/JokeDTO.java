@@ -31,7 +31,7 @@ public class JokeDTO {
 
 
     public JokeDTO(Joke rm) {
-        this.id= rm.getId();
+        //this.id= rm.getId();
         this.joke = rm.getJoke();
         this.type = rm.getType();
         this.jokeName = rm.getJokeName();

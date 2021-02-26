@@ -1,5 +1,5 @@
-let URL = "http://localhost:8080/ca01/api/car/getall"
-//let URL = "https://achc.dk/CA-01/api/car/getall" //Når vi aflevere
+//let URL = "http://localhost:8080/ca01/api/car/getall"
+let URL = "https://achc.dk/CA-01/api/car/getall" //Når vi aflevere
 let carsArray = [];
 
 var data = fetch(URL)
@@ -32,6 +32,7 @@ sortByInput.onclick = function(){
 }
 
 searchByInput.onclick = function () {
+    
     let carsFilteredTotal = [];
 //    const mySet1 = new Set();
     let input = inputField.value;
@@ -64,7 +65,7 @@ searchByInput.onclick = function () {
 //        }
     }
 
-    carsArray.length=0;
+//    carsArray.length=0;
 $.each(carsFilteredTotal, function(i, el){
     if($.inArray(el, carsArray) === -1) carsArray.push(el);
 });
