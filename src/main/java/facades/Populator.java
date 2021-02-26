@@ -44,5 +44,6 @@ public class Populator {
     
     public static void main(String[] args) {
         populateCar();
+        populateGroupMember();
     }
 }

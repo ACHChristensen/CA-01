@@ -2,32 +2,42 @@
 <html>
     <head>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <title>Cars</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
     <body>
         <div class="container">
-        <h1>Welcome to our Car-Page</h1>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>Year</th>
-                    <th>Make</th>
-                    <th>Model</th>
-                    <th>Price</th>
-                    
-                </tr>
-            </thead>
-            <tbody id="table-rows2">
-            </tbody>
-            <input id="sortingInput"></input>
-            <button id="SortByYear">Sort after year</button>
-        </table>
-        
-        
+            <h1>Welcome to our Car-Page</h1>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Year</th>
+                        <th>Make</th>
+                        <th>Model</th>
+                        <th>Price</th>
+
+                    </tr>
+                </thead>
+                <tbody id="table-rows2">
+                </tbody>
+                <input id="sortingInput"></input>
+                
+                <input type="checkbox" id="year" name="year" value="produced">
+                <label for="year">Year</label><br>
+                <input type="checkbox" id="idsearch" name="id" value="id">
+                <label for="idsearch">ID</label><br>
+                <input type="checkbox" id="price" name="price" value="price">
+                <label for="price">Price</label>
+                
+                <button id="search">Search</button>
+                <button id="sort">Sort</button>
+            </table>
+
+
         </div>
-        <script src="./Js/carScript.js"></script>
+        <script src="./JS/carScript.js"></script>
 
 
     </body>
