@@ -26,6 +26,7 @@ public class Populator {
         gf.create(new GroupMemberDTO(new GroupMember("Mari", "cph-mh823", "DeadWood")));
         gf.create(new GroupMemberDTO(new GroupMember("Cathrine", "cph-ac221", "Arrow")));
         gf.create(new GroupMemberDTO(new GroupMember("Nikolaj", "cph-nt105", "Bojack Horseman")));
+        gf.create(new GroupMemberDTO(new GroupMember("Jonathan", "cph-jj450", "Friends")));
       
 
     }
