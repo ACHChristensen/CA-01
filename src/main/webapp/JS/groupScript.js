@@ -1,5 +1,5 @@
-//let URL = "http://localhost:8080/ca01/api/groupmember/getall"
-let URL = "https://achc.dk/CA-01/api/groupmember/getall" //Når vi aflevere
+let URL = "http://localhost:8080/ca01/api/groupmember/getall"
+//let URL = "https://achc.dk/CA-01/api/groupmember/getall" //Når vi aflevere
 
 const getAllMembersBtn = document.getElementById("fetchMembs")
 
