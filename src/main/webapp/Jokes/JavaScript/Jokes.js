@@ -20,7 +20,7 @@ window.onload =
 
 document.getElementById("fetchJokeByID").addEventListener("click", function(e){
         let id = document.getElementById("joke-id").value;
-    fetch(`api/jokes/${id}`)
+    fetch(`http://localhost:8080/ca-1/api/jokes/${id}`)
         .then(res=>res.json())
         .then(data=> {
             document.getElementById("joke-p").innerText=data.joke;
@@ -35,7 +35,7 @@ function makeSingleTableRow(name){
 }
 
 document.getElementById("random-joke").addEventListener("click", function (e){
-    fetch(`api/jokes/random`)
+    fetch(`http://localhost:8080/ca-1/api/jokes/random`)
         .then(res=>res.json())
         .then(data=> {
             document.getElementById("table-rand").innerHTML=makeSingleTableRow(data);
